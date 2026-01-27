@@ -1,0 +1,11 @@
+# This is the configuration file for Ghostty.
+
+# Reload the config file by [Ctrl + Shift + ,]
+
+theme = Gruvbox Material
+
+cursor-style-blink = true
+
+# Keybinds
+
+
