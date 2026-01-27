@@ -1,5 +1,8 @@
 local vim = vim
 local Plug = vim.fn['plug#']
+local uname = vim.loop.os_uname()
+local is_macos = uname.sysname == "Darwin"
+local is_linux = uname.sysname == "Linux"
 
 vim.call('plug#begin')
 
@@ -22,12 +25,11 @@ Plug('goolord/alpha-nvim')
 Plug('folke/zen-mode.nvim')
 Plug('folke/twilight.nvim')
 Plug('romgrk/barbar.nvim')
-Plug('CopilotC-Nvim/CopilotChat.nvim')
-
 Plug('gelguy/wilder.nvim')
 
 vim.call('plug#end')
 
+-- require("lsp.mason-zls")
 require("config.mappings")
 require("config.options")
 require("plugins.colorscheme")
@@ -40,6 +42,6 @@ require("plugins.alpha")
 require("plugins.twilight")
 require("plugins.zen")
 require("plugins.wilder")
-require("plugins.copilotchat")
+-- require("plugins.copilotchat")
 vim.lsp.enable('lua_ls')
 vim.lsp.enable('zls')
