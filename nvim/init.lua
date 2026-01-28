@@ -26,6 +26,7 @@ Plug('folke/zen-mode.nvim')
 Plug('folke/twilight.nvim')
 Plug('romgrk/barbar.nvim')
 Plug('gelguy/wilder.nvim')
+Plug('ray-x/lsp_signature.nvim')
 
 vim.call('plug#end')
 
