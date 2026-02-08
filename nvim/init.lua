@@ -1,8 +1,5 @@
 local vim = vim
 local Plug = vim.fn['plug#']
-local uname = vim.loop.os_uname()
-local is_macos = uname.sysname == "Darwin"
-local is_linux = uname.sysname == "Linux"
 
 vim.call('plug#begin')
 
@@ -22,27 +19,25 @@ Plug('nvim-lualine/lualine.nvim')
 Plug('nvim-tree/nvim-web-devicons')
 Plug('lukas-reineke/indent-blankline.nvim')
 Plug('goolord/alpha-nvim')
-Plug('folke/zen-mode.nvim')
-Plug('folke/twilight.nvim')
 Plug('romgrk/barbar.nvim')
 Plug('gelguy/wilder.nvim')
 Plug('ray-x/lsp_signature.nvim')
+Plug('vague-theme/vague.nvim')
 
 vim.call('plug#end')
 
--- require("lsp.mason-zls")
+require("plugins.vague")
 require("config.mappings")
 require("config.options")
-require("plugins.colorscheme")
+-- require("plugins.colorscheme")
 require("lsp.lua")
 require("lsp.zls")
 require("plugins.blink")
 require("plugins.lualine")
 require("plugins.ibl")
 require("plugins.alpha")
-require("plugins.twilight")
-require("plugins.zen")
 require("plugins.wilder")
--- require("plugins.copilotchat")
 vim.lsp.enable('lua_ls')
 vim.lsp.enable('zls')
+vim.cmd("colorscheme vague")
+

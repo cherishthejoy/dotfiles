@@ -29,3 +29,5 @@ vim.opt.cursorcolumn = true
 vim.opt.filetype.plugin = true
 vim.opt.filetype.indent = true
 vim.opt.termguicolors = true
+
+vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
