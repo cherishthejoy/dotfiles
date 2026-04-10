@@ -3,6 +3,8 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
 
+Plug('williamboman/mason.nvim')
+Plug('williamboman/mason-lspconfig.nvim')
 Plug('neovim/nvim-lspconfig')
 Plug('nvim-treesitter/nvim-treesitter')
 Plug('nvim-lua/plenary.nvim')
@@ -24,6 +26,7 @@ end, ['for'] = {'markdown', 'vim-plug'} })
 
 vim.call('plug#end')
 
+require("lsp.lsp")
 require("config.autocmds")
 require("config.mappings")
 require("config.options")
@@ -40,6 +43,5 @@ require("plugins.autopairs")
 
 vim.lsp.enable('lua_ls')
 vim.lsp.enable('zls')
-vim.lsp.enable('rust_analyzer')
 
 vim.cmd("colorscheme gruvbox")
