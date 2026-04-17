@@ -13,6 +13,8 @@ Plug('nvim-lualine/lualine.nvim')
 Plug('nvim-tree/nvim-web-devicons')
 Plug('saghen/blink.cmp')
 Plug('morhetz/gruvbox')
+Plug('vague2k/vague.nvim')
+Plug("rebelot/kanagawa.nvim")
 Plug('https://codeberg.org/ziglang/zig.vim')
 Plug('lukas-reineke/indent-blankline.nvim')
 Plug('goolord/alpha-nvim')
@@ -44,5 +46,9 @@ require("plugins.autopairs")
 
 vim.lsp.enable('lua_ls')
 vim.lsp.enable('zls')
+
+local theme = require("config.theme")
+
+vim.keymap.set("n", "<leader>tt", theme.cycle)
 
 vim.cmd("colorscheme gruvbox")
