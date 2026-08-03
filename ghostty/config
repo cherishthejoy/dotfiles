@@ -1,7 +1,5 @@
-# Reload the config file by [Ctrl + Shift + ,]
-
 theme = Gruvbox Material
 cursor-style-blink = true
 
-font-family = JetBrains Mono Nerd Font
-font-size = 14
+font-family = JetBrainsMono Nerd Font
+font-size = 16

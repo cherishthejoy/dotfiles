@@ -1,3 +1,18 @@
-if status is-interactive
-# Commands to run in interactive sessions can go here
+if test -x /opt/homebrew/bin/brew
+    /opt/homebrew/bin/brew shellenv fish | source
+end
+
+fish_add_path -g $HOME/lang/zig-aarch64-macos-0.16.0
+fish_add_path -g $HOME/.local/bin
+
+set -gx EDITOR nvim
+set -gx VISUAL nvim
+set -g fish_greeting
+
+if type -q fzf
+    fzf --fish | source
+end
+
+if type -q atuin
+    atuin init fish | source
 end
