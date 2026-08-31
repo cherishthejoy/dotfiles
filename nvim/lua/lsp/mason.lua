@@ -11,6 +11,6 @@ require("mason").setup({
 require("mason-lspconfig").setup({
     ensure_installed = {
         "vtsls",
-        "astro"
+        "roslyn_ls"
     },
 })
