@@ -8,7 +8,7 @@ vim.env.PATH = '/opt/homebrew/bin:' .. vim.env.PATH
 Plug('williamboman/mason.nvim') -- Must
 Plug('williamboman/mason-lspconfig.nvim') -- Must
 Plug('neovim/nvim-lspconfig') -- HMMMMMMMM
--- Plug('nvim-treesitter/nvim-treesitter')
+Plug('nvim-treesitter/nvim-treesitter')
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 Plug('stevearc/conform.nvim')
 Plug('nvim-lua/plenary.nvim') -- Required
@@ -37,7 +37,7 @@ vim.call('plug#end')
 
 require("config.mappings")
 require("config.options")
-require("lsp.lsp")
+require("lsp.mason")
 require("plugins.gruvbox")
 require("plugins.blink")
 require("plugins.lualine")
